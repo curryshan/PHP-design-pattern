@@ -6,7 +6,7 @@
 
 
 // 用继承的方式来解决问题
-// http://www.processon.com/diagraming/584278fee4b08e3135a7fd7a
+// 类图地址 http://www.processon.com/diagraming/584278fee4b08e3135a7fd7a
 
 
 abstruct class Lesson
