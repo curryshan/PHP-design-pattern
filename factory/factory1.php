@@ -54,8 +54,8 @@ class EmailMannger
 
 abstract class EmailSever
 {
-	public function sendEmail();
-	public function reciveEmail();
+	abstract public function sendEmail();
+	abstract public function reciveEmail();
 }
 
 class SinaEmailServer

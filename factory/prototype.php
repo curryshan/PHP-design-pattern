@@ -40,8 +40,8 @@ class EmailMannger
 //  一个产品类 EmailServer抽象类
 abstract class EmailSever
 {
-	public function sendEmail();
-	public function reciveEmail();
+	abstract public function sendEmail();
+	abstract public function reciveEmail();
 }
 
 class SinaEmailServer
@@ -73,8 +73,8 @@ class NeteaseEmailServer
 //  另一个产品类 导出邮箱所有邮件 每个服务器的邮件单独保存在一个位置
 abstract class StoreEmail
 {
-	public function getAllEmail();
-	public function storeAllEmail();
+	abstract public function getAllEmail();
+	abstract public function storeAllEmail();
 }
 
 class StoreSinaEmail
