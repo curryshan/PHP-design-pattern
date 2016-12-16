@@ -8,7 +8,7 @@
  *
  * 类图地址 http://www.processon.com/diagraming/5846aa07e4b0d0d77c1c36bb
  */
-class EmailMannger
+class EmailManager
 {
 	//  新增两个属性 用于保存两个对象 作为原型供克隆使用
 	private $EmailServer;
@@ -100,3 +100,13 @@ class StoreNeteaseEmail
 		eturn 'store all NeteaseEmail to Netease dir';
 	}
 }
+
+//  客户端调用
+$emailManager = new EmailManager(new SinaEmailServer(), new StoreSinaEmail());
+//  用新浪服务器发送邮件
+$sinaServer = $emailManager->getEmailServer();
+$sinaServer->sendEmail();
+//  转储新浪邮箱里的邮件
+$sinaStore = $emailManager->getStoreEmail();
+$sinaStore->getAllEmail();
+$sinaStore->storeAllEmail();
