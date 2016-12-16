@@ -4,11 +4,11 @@
  * 当我们在创建 SinaEmailServer对象的时候 我们也必然要使用的是StoreSinaEmail对象
  * 虽然这两个对象是实现的处于平行关系 无联系的两个抽象类（EmailSever StoreEmail）
  * 此时这两个抽象类属于一个产品族 而为产品族内不同的产品实现创建联系正是抽象工厂模式解决的问题
- * 可以在类的内部对产品族进行约束
+ * 可以在类的内部对产品族进行约束（为不同等级机构中的同一产品族创建联系）
  *
  * 抽象工厂模式的缺点也显而易见 
  * 每当添加新的产品到产品族 那么创建者的抽象类和具体实现类都要做出改变
- * 如getStoreEmail方法
+ * 如getStoreEmail方法的出现
  *
  * 类图地址 http://www.processon.com/diagraming/5846730fe4b08e3135d11b26
  */
@@ -53,9 +53,8 @@ class NeteaseEmailManager
 		return new StoreSinaEmail();
 	}
 }
-
-//  所有产品类构成一个产品族 纵向的模式 
-
+//  EmailSever和StoreEmail属于两个不同的等级结构
+//  Sina和Netease则属于两个不同的产品族
 //  一个产品类 EmailServer抽象类
 abstract class EmailSever
 {
